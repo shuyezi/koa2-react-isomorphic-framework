@@ -7,6 +7,9 @@ import ReactDOM from 'react-dom';
 
 import './index.scss';
 
+//components
+import CompDemo from '../../../components/demo';
+
 export default class Demo extends Component {
     constructor(props){
         super(props);
@@ -27,6 +30,8 @@ export default class Demo extends Component {
                  <br />
                  <br />
                  <button onClick={this.buttonHandle.bind(this)}>点我111</button>
+                 <br />
+                 组件看这里：<CompDemo />
              </div>
          );
      }
