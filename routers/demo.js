@@ -12,8 +12,8 @@ import Demo from '../src/views/demo';
 
 router.get('/', async (ctx, next) => {
     const pageData = {
-        name: '小吴',
-        age: 18
+        name: '吴小白',
+        age: 189
     };
 
     ctx.render(<Demo data={pageData} source='back' />, {

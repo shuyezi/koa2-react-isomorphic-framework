@@ -10,8 +10,8 @@
     "predev": "rimraf ./public & rimraf ./assetsMap.js & NODE_ENV=development",
     "dev": "watch=--watch npm run buildClient",
     "predevServer": "rimraf ./dist && NODE_ENV=development",
-    "devServer": "npm run buildServer",
-    "postdevServer": "node ./dist/app.js",
+    "devServer": "watch=--watch npm run buildServer",
+    "server": "supervisor ./dist/app.js",
     "predeploy": "npm run clean && NODE_ENV=production",
     "deploy": "npm run buildClient && npm run buildServer",
     "postdeploy": "pm2 start ./dist/app.js"
@@ -46,7 +46,6 @@
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
-    "koa-webpack-middleware": "^1.0.3",
     "node-sass": "^4.5.1",
     "null-loader": "^0.1.1",
     "sass-loader": "^6.0.3",
